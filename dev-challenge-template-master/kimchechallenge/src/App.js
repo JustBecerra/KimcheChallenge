@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
+import SearchBar from "./components/SearchBar.jsx";
+import GroupButton from "./components/GroupButton.jsx";
 
 const client = new ApolloClient({
   uri: "https://48p1r2roz4.sse.codesandbox.io",
@@ -9,13 +11,13 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div>
-      <h2>
-        My first Apollo app{" "}
-        <span role="img" aria-label="Rocket">
-          🚀
-        </span>
-      </h2>
+    <div className="content">
+      <header className="header">
+        Country search
+      </header>
+      <h4 className="randomtxt">Some random text</h4>
+      <SearchBar />
+      <GroupButton />
     </div>
   </ApolloProvider>
 );
