@@ -3,7 +3,6 @@ import "./App.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 import SearchBar from "./components/SearchBar.jsx";
-import GroupButton from "./components/GroupButton.jsx";
 
 const client = new ApolloClient({
   uri: "https://48p1r2roz4.sse.codesandbox.io",
@@ -17,7 +16,6 @@ const App = () => (
       </header>
       <h4 className="randomtxt">Some random text</h4>
       <SearchBar />
-      <GroupButton />
     </div>
   </ApolloProvider>
 );

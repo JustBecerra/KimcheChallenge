@@ -3,14 +3,3 @@
     align-items: center;
 }
 
-.buttons{
-    width:150px;
-    height:25px;
-    margin-left:150px;
-    cursor:pointer;
-}
-
-.buttons::selection{
-    background-color: rgb(38, 38, 253);
-    color:white;
-}
