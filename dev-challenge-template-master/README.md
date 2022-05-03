@@ -1,7 +1,7 @@
 # Desafío para Software Engineers
 
-Nombre postulante: [TU NOMBRE]
-Link a la app en producción: [LINK DEL DEPLOY]
+Nombre postulante: Justo Juan Becerra
+Link a la app en producción: https://kimche-challenge.vercel.app
 
 ## Instrucciones
 
