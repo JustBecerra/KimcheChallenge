@@ -1,10 +1,18 @@
 import React from "react"
 import './GroupButton.css'
 import styled from 'styled-components';
+import { useQuery } from "@apollo/react-hooks";
+import Country from "./Country.jsx";
 
 export default function GroupButton(props){
     const types = ['Continent', 'Language']
     const [active, setActive] = React.useState(types[0]); 
+    const { loading, error, data } = useQuery(props.countrynames);
+    
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
+
+    console.log(data.continent)
 
     const TurnButton = styled.button`
         width:225px;
@@ -40,6 +48,11 @@ export default function GroupButton(props){
                     </TurnButton>
                 ))}
             </div>
+            {data.continent.countries.map((c) => {
+                return(
+                    <Country />
+                )
+            })}
         </>
         
     )
