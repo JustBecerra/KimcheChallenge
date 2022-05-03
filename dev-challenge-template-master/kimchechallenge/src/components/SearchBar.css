@@ -4,4 +4,18 @@
     height:20px;
     border-radius: 10px;
     background-color: rgb(219, 219, 219);
+    border-style: solid;
+}
+
+.searchbar:focus{
+    padding-left: 40px;
+}
+
+.glass{
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    position:absolute;
+    top:135px;
+    left:205px;
 }

@@ -2,6 +2,7 @@ import React from "react"
 import './SearchBar.css'
 import GroupButton from "./GroupButton"
 import { gql } from "apollo-boost";
+import magnifyingglass from '../img/magnifyingglass.png'
 
 export default function SearchBar(){
     const [country,setCountry] = React.useState("");
@@ -30,7 +31,8 @@ export default function SearchBar(){
 
     return(
         <div>
-            <input className="searchbar" type='text' onChange={(e) => handleChange(e)} placeholder="enter a country"/>
+            <img className='glass' src={magnifyingglass}/>
+            <input className="searchbar" type='text' onChange={(e) => handleChange(e)}/>
             <GroupButton countrynames={countrynames} country={country}/>
         </div>
     )
