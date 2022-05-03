@@ -8,13 +8,19 @@ export default function SearchBar(){
 
     const countrynames = gql`
         query {
-          continent(code:"SA"){
-            name
-            countries{
+            countries {
+                code
                 name
                 capital
-            }
-          }
+                continent{
+                  name
+                }
+                languages{
+                  name
+                }
+                emoji
+                currency
+              }
         }
     `;
 
@@ -25,7 +31,7 @@ export default function SearchBar(){
     return(
         <div>
             <input className="searchbar" type='text' onChange={(e) => handleChange(e)} placeholder="enter a country"/>
-            <GroupButton countrynames={countrynames}/>
+            <GroupButton countrynames={countrynames} country={country}/>
         </div>
     )
 }

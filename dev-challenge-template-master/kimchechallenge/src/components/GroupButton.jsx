@@ -12,8 +12,6 @@ export default function GroupButton(props){
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
-    console.log(data.continent)
-
     const TurnButton = styled.button`
         width:225px;
         height:40px;
@@ -33,7 +31,9 @@ export default function GroupButton(props){
         color:white;
         `}    
     `;
-
+    
+    let filteredCountries = data.countries.filter(country => country.name.includes(props.country));
+    // console.log(filteredCountries)
     return(
         <>
             <div className="groups">
@@ -48,9 +48,9 @@ export default function GroupButton(props){
                     </TurnButton>
                 ))}
             </div>
-            {data.continent.countries.map((c) => {
+            {filteredCountries.map((c) => {
                 return(
-                    <Country />
+                    <Country key={c.code} capital={c.capital} currency={c.currency} name={c.name} emoji={c.emoji} continent={c.continent.name} languages={c.languages} active={active}/>
                 )
             })}
         </>

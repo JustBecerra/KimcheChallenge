@@ -1,0 +1,25 @@
+.countrycontainer{
+    width:30%;
+    height:150px;
+    border:2px solid gray;
+    display:flex;
+    flex-direction:row;
+    border-radius: 5%;
+}
+
+.emoji{
+    margin-left: 20px;
+}
+
+.name{
+    margin-left: 20px;
+}
+
+.data{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    bottom:100px;
+    left:20px;
+    width:fit-content
+}
