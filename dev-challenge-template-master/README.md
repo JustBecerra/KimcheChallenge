@@ -3,6 +3,11 @@
 Nombre postulante: Justo Juan Becerra
 Link a la app en producción: https://kimche-challenge.vercel.app
 
+Respuesta a pregunta abierta:
+
+Propongo utilizar una SPA como arquitectura debido a su velocidad de rendimiento, Node.js en el backend debido a su eficiencia con el motor V8. Minimizar scripts, eliminar codigo innecesario, comentarios y variables largas para mejorar el rendimiento. Configurar caches también ayuda para almacenar información de forma local en
+la computadora del usuario para utilizar en caso de futuras visitas, mejorando el tiempo de carga y asegura una mejor Experiencia de usuario.
+
 ## Instrucciones
 
 Debes crear un buscador de países consultando el [siguiente grafo](https://countries.trevorblades.com/). Este código contiene una base para seguir con la aplicación en React y ApolloClient. Queda a disposición tuya cualquier cambio, ya sea de estructura, estilo, etc.
